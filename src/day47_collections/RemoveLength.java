@@ -1,9 +1,6 @@
 package day47_collections;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class RemoveLength {
 
@@ -19,6 +16,7 @@ public class RemoveLength {
         }
 
         System.out.println(words);
+        System.out.println(new TreeSet<>(words));
 
     }
 }
