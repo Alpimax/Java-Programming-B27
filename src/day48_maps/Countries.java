@@ -42,5 +42,20 @@ public class Countries {
             }
         }
 
+//            for(List<String> eachCountry : countries.values()){
+//                for( String eachCity : eachCountry)
+//            }
     }
 }
+
+/*
+
+    { K   V } each one is an entry
+    {United States = [Chicago, Dallas, Irvine, San Diego, New York, Philadelphia, Madison]}
+    {Europe=[London, Paris, Rome, Istanbul, Berlin, Madrid]}
+    {Uzbekistan=[Tashkent, Samarkand, Bukhara, Fergana, Urgench, Khiva, Bakht]}
+    {Kazakhstan=[Petropavlovsk, Astana, Almaty, Aktobe, Kokshetau]}
+
+
+
+ */
