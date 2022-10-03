@@ -45,8 +45,11 @@ public class ConfigReader {
         2) created a class called ConfigReader
         3) in Config Reader we created a Properties object
         4) in the static block we connected to the file, using FileInputStream
-        5) used the load method from the Properties object to load the information from the file to the Properties object
-
+        5) used the load method from the Properties object(3) to load the information from the file to the Properties object
      */
+
+    public static String getProperty(String key){
+        return properties.getProperty(key);
+    }
 
 }
