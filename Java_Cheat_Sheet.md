@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 09/16/2022
+#### Last updated: 10/05/2022
 
 ## Table of Contents:
 
@@ -1671,6 +1671,288 @@ use 'is a' relation to describe how classes are connected
 	keyword that can find the type of the object
 
 ---
+
+## Collections Framework
+
+    a group of interfaces and classes that define data structures that handle data differently. 
+        They define how data is added, or read from etc, based on different algorithms and implementations
+
+### Main interface of the framework
+
+    Iterable: parent of the Collection interface. Allows data structures to be iterated with a for each loop. Defines the iterator method
+
+    Collection: child of Iterable. The parent of the Collection types. Defines the main functions of a collection
+        ex: add, remove, size
+
+    List: ordered(index), allows duplicates 
+
+    Set: unordered(no indexes), not allow duplicates
+        SortedSet: child of Set. has the idea of sorting
+
+    List: ordered(index), allowed duplicates
+
+    Queue: typically FIFO (First In First Out), but not necessarily(not always)
+
+        null not allowed because there are additional methods defined that return null
+
+        Deque: working with data from beginning and end of the collection
+            Ex: methods: addFirst, removeLast()
+
+    Map: stores information using keys and values
+        DOES NOT INHERIT THE COLLECTION INTERFACE, but still considered a part of the collection framework
+
+### Classes that implement List:
+
+    ArrayList: data structure that uses arrays internally. Re-sizeable array
+        useful to storing and reading information
+
+    LinkedList: data structure that uses nodes internally.
+        also implements Deque -> doubly linked
+
+        useful to manipulate the collection. adding or removing is handled efficiently 
+
+        Node: an object that has the value, reference to the node before it and reference to node after it
+
+    Vector: legacy version of ArrayList. it is synchronized
+
+        -> synchronization: 
+            thread safe: multiple threads cannot access at the same time
+
+    Stack(class): LIFO (Last In First Out) -> child of Vector
+        methods related to LIFO:
+    
+        push(): adding the element to the top of the stack. also returns the element added
+        pop(): removing the element at the top of the stack. also returns that element removed
+        peek(): returns the element at the top of the stack
+
+### Classes that implement Set:
+
+    HashSet: follows a Hashing algorithm, which means handles data fast and efficiently
+        data structure that uses HashMap internally
+
+        the order is random to view, but is based on its own algorithm
+
+    LinkedHashSet(): data structure that uses HashTable and LinkedList implementations
+
+        the insertion order is maintained
+
+    TreeSet: implements the SortedSet
+        Elements are stored in the natural order(sorted order, smallest to largest, lexicographical)
+
+        null is not allowed
+
+### Classes that implement Queue
+
+    PriorityQueue: data structure that stores elements based on its own priority. Sometimes looks like natural order, but cannot be predicted (random)
+
+        does not accept null
+
+    ArrayDeque: implementing Deque. More proper queue type
+        also has access to both side of the collection
+
+        does not accept null
+
+    Methods:
+        
+            add()       -----       offer()
+            remove()    -----       poll()
+            element()   -----       peek()
+        
+            The methods on the left can cause an exception to occur whenever the method fails
+            The method on the right just return null
+
+### Iterable
+
+    any data structure that implements the Iterable, which is any data structure that implements Collection interface, can be be iterated with a for each loop
+
+    The interface defined this abstract method:
+
+        Iterator<T> iterator();
+
+        this abstract method was implemented in the collection classes. The methods returns an iterator object which allows us to iterate through the elements one a at a time using the methods of the iterator. It iterates through from beginning to end
+
+        -> think of the iterator as a pin
+        -> when the iterator method is called the start point is BEFORE the first element
+
+    methods:
+        hasNext(): returns boolean. checks if there is any element next to the current position of the iterator(pin)
+        next(): returns the element. first moves the iterator to the next element and it returns that element
+        remove(): remove the element at the current iterator position
+
+### Classes that implement the Map interface
+    the main idea of this interface is the key / value format
+        Entry: key / pair
+        each key is linked to some value
+
+        -> keys must be unique
+        -> values can be duplicate
+
+    Syntax:
+        Map < keyDatatype, valueDatatype > referenceName = object
+        Map<Integer, String> map = new HashMap<>();
+
+    HashMap: order the entries is not guaranteed (random order)
+        using hashing algorithm (fast and efficient)
+
+    LinkedHashMap: insertion order of the entries is maintained
+
+    TreeMap: 
+        implements SortedMap (interface)
+
+        The entries are sorted in a natural order(based on the keys)
+            -> ascending order, smallest to biggest, lexicographical 
+
+        null key is not allowed
+
+    HashTable: the order is not guaranteed (random order)
+        legacy class -> inheriting Dictionary
+        synchronized (thread - safe)
+        both null keys and values not allowed
+---
+
+## Extra topics
+
+### Functional Interface
+
+    not used for abstraction with inheritance
+        not meant to be implemented in a class(overridden)
+
+    custom function (method)
+
+    has one abstract method
+        -> common names for these methods: test, apply, function, accept
+
+    Q: If the interface is not inherited how do you implement the abstract method?
+        lambda expression gives the implementation
+
+    @FunctionalInterface
+        helps to check if the interface is created correctly
+
+### Lambda expression
+
+    function without a name
+
+    can be created anywhere so we can use them to define the implementation of the abstract methods of functional interface
+
+    syntax:
+        () -> {};
+        (parameters) -> {statements};
+
+        Note: parenthesis for the parameters is not needed if there is only one parameters
+        Note: curly brackets are not needed if there is only one statement
+
+### Generics
+
+    <> brackets allow us to define any object type 
+
+    used in classes or interface to help make a flexible file because any object type can be given
+
+        Ex: List<E>, Map<K, V>, Predicate<T>
+
+    Method parameters and return types can also use the generic type to be even more flexible
+
+    common names for the generic type: T, U, R
+
+### Built Functional Interface
+
+    Predicate<T>
+        defines a function that takes one object as the argument and returns boolean
+
+        method: boolean test(T t)
+
+    Consumer<T>
+        defines a function that takes one object as the argument and does not return anything
+
+        method: void accept(T t)
+
+    Function<T, R>
+        defines a function that takes one object as the argument and returns one object 
+
+        method: R apply(T t)
+
+    BiPredicate<T, U>
+        defines a function that takes two objects(any type) as the arguments and returns boolean
+
+        method: boolean test(T t, U u)
+
+    BiConsumer<T, U>
+        defines a function that takes two objects(any type) as the arguments and doesn't return anything (void)
+
+        method: void accept(T t, U u)
+
+    BiFuncation<T, U, R>
+        defines a function that takes two objects(any type) as the arguments and returns an object(any type)
+
+        method: R apply(T t, U u)
+
+---
+
+### Stream
+    added in Java 8
+
+	not a data structure, but acts to process data quickly using its different methods
+
+	doesn't change the data structures that is providing the data
+
+	How to get a Steam: we will focus on
+		Collections method: stream() gathers the elements and then allows you to do an action
+		    or
+		Stream.of(array) creates a Stream from an array
+
+### Stream methods:
+
+		distinct(): gets rid of duplicates
+
+		collect(): method to take all elements to allow conversion to another type
+			arguments:
+				Collectors.toList(): returns elements as a List
+
+		toArray(): elements are converted to the array
+			Arrays.stream(arr).distinct().toArray();
+
+		skip(): allows to skip a certain amount of elements from the data structure
+			-> act a little like removing them
+
+			int argument for how many elements will be skipped
+
+		limit(): only keeps the defined number of elements
+
+			int argument for how many elements there will be total
+
+		map(): allows to change the elements based on given lambda argument
+
+			Function functional interface argument
+
+		filter(): allows to filter the elements, return specific ones
+
+			Predicate functional interface argument
+
+		count(): allows you to count certain elements
+
+		forEach(): allow to iterate through the elements
+
+		allMatch(): checks if all elements match the defined lambda
+
+			Predicate functional interface argument
+			returns boolean
+
+		anyMatch(): checks if one element match the defined lambda
+
+			Predicate functional interface argument
+			returns boolean
+
+		noneMatch(): checks if no element match the defined lambda
+
+			Predicate functional interface argument
+			returns boolean	
+
+---
+
+
+
+
+
+
 
 
 
