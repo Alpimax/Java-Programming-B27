@@ -69,7 +69,7 @@ public class StreamMethod2 {
 
         list6.stream().map(s -> s.toUpperCase()).forEach(e -> System.out.print(e + " "));
         System.out.println();
-        list6.stream().map(s -> s.toUpperCase()).forEach(System.out::print); // does the same thing as line 70, each element uses the method
+        list6.stream().map(s -> s.toUpperCase()).forEach(System.out::println); // does the same thing as line 70, each element uses the method
 
     }
 }
