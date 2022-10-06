@@ -64,5 +64,6 @@ public class StreamMethods {
         System.out.println(Arrays.stream(s.split("")).distinct().count());
         System.out.println(Arrays.stream(s.split("")).distinct().collect(Collectors.toList())); // you could have also converted the stream to an array: toArray() instead of Collect to list
 
+
     }
 }
