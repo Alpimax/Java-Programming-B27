@@ -55,7 +55,7 @@ public class StreamMethod2 {
 
         // given some list of numbers find how many were even
         System.out.println(list5.stream().filter(p -> p % 2 == 0).count());
-        System.out.println(list5.stream().filter(p -> p % 2 == 0).distinct().count()); // how many unique even numbers
+        System.out.println(list5.stream().filter(p -> p % 2 == 0).count());// how many unique even numbers
 
         List<String> list6 = new ArrayList<>(Arrays.asList("java", "soft skills", "javascript", "JAVA", "JAVAscript", "selenium", "restassured", "cypress"));
 

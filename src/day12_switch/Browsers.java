@@ -14,6 +14,7 @@ public class Browsers {
             case "firefox":
                 System.out.println("opening google in firefox");
                 break;
+
             case "Safari":
             case "safari":
                 System.out.println("Special set up or apple computers");

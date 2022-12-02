@@ -11,6 +11,7 @@ public class Etsy {
                 .substring(1) --> remove the dollar sign : 144.99
          */
 
+
         System.out.println(price);
 
         if(price >= 100){
