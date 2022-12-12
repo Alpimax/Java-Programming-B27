@@ -22,6 +22,7 @@ public class Countries {
         countries.put("Uzbekistan", new ArrayList<>(Arrays.asList("Tashkent", "Samarkand", "Bukhara", "Fergana", "Urgench", "Khiva", "Bakht")));
         countries.put("Kazakhstan", new ArrayList<>(Arrays.asList("Petropavlovsk", "Astana", "Almaty", "Aktobe", "Kokshetau")));
 
+
         System.out.println(countries);
 
         Scanner input = new Scanner(System.in);
