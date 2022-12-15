@@ -2,19 +2,33 @@ package solutions;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Map;
 
 public class MentorMeeting {
     public static void main(String[] args) {
-        int[] a = {1, 0, 3, 0, 5, 0, 6, 0, 7, 20, 50, 0, 27, 33};
-        System.out.println(Arrays.toString(arr(a)));
+//        int[] a = {1, 0, 3, 0, 5, 0, 6, 0, 7, 20, 50, 0, 27, 33};
+//        System.out.println(Arrays.toString(arr(a)));
+//
+//
+//        System.out.println(Arrays.toString(arraySort(a)));
+//        finra(5);
+//        System.out.println(fact(5));
+//        System.out.println(stringInt("isa99qwehu123jasa7")); //31
+//        System.out.println("alpi");
 
-
-        System.out.println(Arrays.toString(arraySort(a)));
-        finra(5);
-        System.out.println(fact(5));
-        System.out.println(stringInt("isa99qwehu123jasa7")); //31
-
+        int a = -219;
+        String b = "" + a;
+        System.out.println(b);
+        int c = Integer.parseInt(b);
+        System.out.println(c);
     }
+
+    public static int sort(int num) {
+
+        return num;
+    }
+
+
 
     public static int[] arraySort(int[] a) {
         int[] arr = new int[a.length];
@@ -146,7 +160,6 @@ public class MentorMeeting {
 
         return count;
     }
-
 
 
 }

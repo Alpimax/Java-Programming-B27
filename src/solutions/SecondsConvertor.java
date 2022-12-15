@@ -32,7 +32,6 @@ public class SecondsConvertor {
                 i++;
 
             }
-
         }
         return alper;
     }
