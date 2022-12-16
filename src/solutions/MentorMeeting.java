@@ -32,7 +32,21 @@ public class MentorMeeting {
         }
         System.out.println(map);
     }
+    public static void UniqueCharacterFromString(String  str) {
+        Map<String,Integer> map =new HashMap<>();
 
+        for(int i = 0; i < str.length(); i++){
+            String key =""+ str.charAt(i);
+            if(!map.containsKey(key)){
+                map.put(key, 1);
+            } else {
+                map.put(key, map.get(key) + 1);
+            }
+        }
+        map.sc
+
+        System.out.println();
+    }
 
 
     public static int[] arraySort(int[] a) {
