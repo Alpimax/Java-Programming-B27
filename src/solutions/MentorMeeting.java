@@ -1,6 +1,9 @@
 package solutions;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MentorMeeting {
     public static void main(String[] args) {
 //        int[] a = {1, 0, 3, 0, 5, 0, 6, 0, 7, 20, 50, 0, 27, 33};
@@ -12,17 +15,22 @@ public class MentorMeeting {
 //        System.out.println(fact(5));
 //        System.out.println(stringInt("isa99qwehu123jasa7")); //31
 //        System.out.println("alpi");
+        FrequencyOfCharacters("alperrozkann");
 
-        int a = -219;
-        String b = "" + a;
-        System.out.println(b);
-        int c = Integer.parseInt(b);
-        System.out.println(c);
     }
 
-    public static int sort(int num) {
+    public static void FrequencyOfCharacters(String  str) {
+        Map<String,Integer> map =new HashMap<>();
 
-        return num;
+        for(int i = 0; i < str.length(); i++){
+            String key =""+ str.charAt(i);
+            if(!map.containsKey(key)){
+                map.put(key, 1);
+            } else {
+                map.put(key, map.get(key) + 1);
+            }
+        }
+        System.out.println(map);
     }
 
 
