@@ -19,12 +19,12 @@ public class MentorMeeting {
 
     }
 
-    public static void FrequencyOfCharacters(String  str) {
-        Map<String,Integer> map =new HashMap<>();
+    public static void FrequencyOfCharacters(String str) {
+        Map<String, Integer> map = new HashMap<>();
 
-        for(int i = 0; i < str.length(); i++){
-            String key =""+ str.charAt(i);
-            if(!map.containsKey(key)){
+        for (int i = 0; i < str.length(); i++) {
+            String key = "" + str.charAt(i);
+            if (!map.containsKey(key)) {
                 map.put(key, 1);
             } else {
                 map.put(key, map.get(key) + 1);
@@ -32,18 +32,19 @@ public class MentorMeeting {
         }
         System.out.println(map);
     }
-    public static void UniqueCharacterFromString(String  str) {
-        Map<String,Integer> map =new HashMap<>();
 
-        for(int i = 0; i < str.length(); i++){
-            String key =""+ str.charAt(i);
-            if(!map.containsKey(key)){
+    public static void UniqueCharacterFromString(String str) {
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < str.length(); i++) {
+            String key = "" + str.charAt(i);
+            if (!map.containsKey(key)) {
                 map.put(key, 1);
             } else {
                 map.put(key, map.get(key) + 1);
             }
         }
-        map.sc
+
 
         System.out.println();
     }

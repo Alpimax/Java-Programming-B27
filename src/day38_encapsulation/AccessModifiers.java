@@ -6,11 +6,25 @@ public class AccessModifiers {
     int b = 10; // this has default access because I didn't use any other modifier
     private int c = 20;
 
+
+
+
+
     public static void main(String[] args) {
+
+        BankAccount bk = new BankAccount(23162371623L,30000);
+
+        bk.getAccountNumber();
+
 
         AccessModifiers obj = new AccessModifiers();
         System.out.println(obj.a);
         System.out.println(obj.b);
         System.out.println(obj.c);
+
+
+
+
+
     }
 }
