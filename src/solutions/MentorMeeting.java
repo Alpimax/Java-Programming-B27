@@ -14,19 +14,22 @@ public class MentorMeeting {
 //        System.out.println(fact(5));
 //        System.out.println(stringInt("isa99qwehu123jasa7")); //31
 //        System.out.println("alpi");
-         var map =  FrequencyOfCharacters("alperrozkann");
-        System.out.println(map);
+        Map<String, Integer> map = FrequencyOfCharacters("alperrozkann");
+        System.out.println(sortMap(map));
 
     }
-    public static Map sortMap(Map str){
 
-        var map = new LinkedHashMap(str);
-
-        return map;
+    public static List<Integer> sortMap(Map<String, Integer> str) {
+        List<Integer> list = new LinkedList<>();
+        for (Map.Entry<String, Integer> each : str.entrySet()) {
+            list.add(each.getValue());
+        }
+        Collections.sort(list);
+        return list;
     }
 
 
-    public static Map FrequencyOfCharacters(String str) {
+    public static Map<String, Integer> FrequencyOfCharacters(String str) {
         Map<String, Integer> map = new HashMap<>();
 
         for (int i = 0; i < str.length(); i++) {
@@ -40,7 +43,7 @@ public class MentorMeeting {
         return map;
     }
 
-    public static void UniqueCharacterFromString(String str) {
+    public static Map<String, Integer> UniqueCharacterFromString(String str) {
         Map<String, Integer> map = new HashMap<>();
 
         for (int i = 0; i < str.length(); i++) {
@@ -51,13 +54,26 @@ public class MentorMeeting {
                 map.put(key, map.get(key) + 1);
             }
         }
-        var unique = new TreeMap<>();
+        Map<String, Integer> unique = new HashMap<>();
         for (Map.Entry<String, Integer> each : map.entrySet()) {
             if (each.getValue() == 1) {
-            unique.put(each.getKey(),each.getValue());
+                unique.put(each.getKey(), each.getValue());
             }
         }
-        System.out.println(unique);
+        return unique;
+    }
+
+    public static void minValue(Map<String, Integer> map) {
+//        System.out.println(sortMap(map).get(0));
+
+        int min = Integer.MAX_VALUE;
+
+        for (Map.Entry<String, Integer> each : map.entrySet()) {
+            if (min > each.getValue()) {
+                min = each.getValue();
+            }
+        }
+        System.out.println(min);
     }
 
 
