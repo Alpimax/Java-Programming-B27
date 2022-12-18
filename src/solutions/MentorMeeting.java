@@ -1,9 +1,7 @@
 package solutions;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class MentorMeeting {
     public static void main(String[] args) {
@@ -16,11 +14,19 @@ public class MentorMeeting {
 //        System.out.println(fact(5));
 //        System.out.println(stringInt("isa99qwehu123jasa7")); //31
 //        System.out.println("alpi");
-        UniqueCharacterFromString("alperrozkann");
+         var map =  FrequencyOfCharacters("alperrozkann");
+        System.out.println(map);
 
     }
+    public static Map sortMap(Map str){
 
-    public static void FrequencyOfCharacters(String str) {
+        var map = new LinkedHashMap(str);
+
+        return map;
+    }
+
+
+    public static Map FrequencyOfCharacters(String str) {
         Map<String, Integer> map = new HashMap<>();
 
         for (int i = 0; i < str.length(); i++) {
@@ -31,7 +37,7 @@ public class MentorMeeting {
                 map.put(key, map.get(key) + 1);
             }
         }
-        System.out.println(map);
+        return map;
     }
 
     public static void UniqueCharacterFromString(String str) {
