@@ -15,7 +15,7 @@ public class MentorMeeting {
 //        System.out.println(stringInt("isa99qwehu123jasa7")); //31
 //        System.out.println("alpi");
         Map<String, Integer> map = FrequencyOfCharacters("alperrozkann");
-        System.out.println(sortMap(map));
+        minValue(map);
 
     }
 
@@ -67,13 +67,15 @@ public class MentorMeeting {
 //        System.out.println(sortMap(map).get(0));
 
         int min = Integer.MAX_VALUE;
+        String key = "";
 
         for (Map.Entry<String, Integer> each : map.entrySet()) {
             if (min > each.getValue()) {
                 min = each.getValue();
+                key = each.getKey();
             }
         }
-        System.out.println(min);
+        System.out.println(key +" = " +  min);
     }
 
 
