@@ -169,6 +169,7 @@ public class MentorMeeting {
     }
 //    Write a method that can return the sum of the digits in a string
 
+
     public static int stringInt(String str) {
         int total = 0;
         for (int i = 0; i < str.length(); i++) {
