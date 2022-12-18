@@ -3,6 +3,7 @@ package solutions;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class MentorMeeting {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class MentorMeeting {
 //        System.out.println(fact(5));
 //        System.out.println(stringInt("isa99qwehu123jasa7")); //31
 //        System.out.println("alpi");
-        FrequencyOfCharacters("alperrozkann");
+        UniqueCharacterFromString("alperrozkann");
 
     }
 
@@ -44,9 +45,13 @@ public class MentorMeeting {
                 map.put(key, map.get(key) + 1);
             }
         }
-
-
-        System.out.println();
+        var unique = new TreeMap<>();
+        for (Map.Entry<String, Integer> each : map.entrySet()) {
+            if (each.getValue() == 1) {
+            unique.put(each.getKey(),each.getValue());
+            }
+        }
+        System.out.println(unique);
     }
 
 
