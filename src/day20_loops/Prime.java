@@ -40,6 +40,8 @@ public class Prime {
 
         System.out.println(isPrime ? "Prime" : "Not Prime");
 
+
+
     }
 }
 
