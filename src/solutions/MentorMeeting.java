@@ -23,7 +23,7 @@ public class MentorMeeting {
     public static boolean isPalindrome(int x) {
         int temp = x;
         int total = 1;
-        int value = 0;
+        var value = 0L;
 
         while (temp > 0) {
             total= temp % 10;
