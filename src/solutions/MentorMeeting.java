@@ -16,7 +16,7 @@ public class MentorMeeting {
 //        System.out.println("alpi");
         Map<String, Integer> map = FrequencyOfCharacters("alperrozkann");
         minValue(map);
-        System.out.println(isPalindrome(10));
+        System.out.println(isPalindrome(1000000001));
 
     }
 
