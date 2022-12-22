@@ -16,10 +16,30 @@ public class MentorMeeting {
 //        System.out.println("alpi");
         Map<String, Integer> map = FrequencyOfCharacters("alperrozkann");
         minValue(map);
+        System.out.println(isPalindrome(10));
 
     }
 
+    public static boolean isPalindrome(int x) {
+        int temp = x;
+        int total = 1;
+        int value = 0;
 
+        while (temp > 0) {
+            total= temp % 10;
+            value += total;
+            value *= 10;
+            temp /= 10;
+        }
+        value /= 10;
+
+       if(x == value)
+           return true;
+       else
+           return false;
+
+
+    }
 
 
     public static List<Integer> sortMap(Map<String, Integer> str) {
@@ -78,10 +98,8 @@ public class MentorMeeting {
                 key = each.getKey();
             }
         }
-        System.out.println(key +" = " +  min);
+        System.out.println(key + " = " + min);
     }
-
-
 
 
     public static int[] arraySort(int[] a) {
