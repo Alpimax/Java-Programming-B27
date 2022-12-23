@@ -46,7 +46,6 @@ public class MentorMeeting {
                         return result.substring(0, i);
                 }
             }
-
         }
         return result;
     }
