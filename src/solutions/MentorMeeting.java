@@ -17,7 +17,38 @@ public class MentorMeeting {
         Map<String, Integer> map = FrequencyOfCharacters("alperrozkann");
         minValue(map);
         System.out.println(isPalindrome(1000000001));
+        String[] array = new String[]{"dog", "racecar", "car"};
+        System.out.println(longestCommonPrefix(array));
 
+    }
+    //Input: strs = ["dog","racecar","car"]
+//Output: "fl"
+//Explanation: There is no common prefix among the input strings.
+
+    public static String longestCommonPrefix(String[] strs) {
+        String megan = strs[0];
+        String result = "";
+        for (int i = 0; i < strs.length; i++) {
+            if (megan.length() > strs[i].length()) {
+                megan = strs[i];
+            }
+        }
+        for (int i = 0; i < megan.length(); i++) {
+            int count = 0;
+            for (int j = 0; j < strs.length; j++) {
+                if (megan.substring(0, i + 1).equalsIgnoreCase(strs[j].substring(0, i + 1))) {
+                    result = megan.substring(0, i + 1);
+                    count++;
+                } else {
+                    if (count == strs.length)
+                        return result;
+                    else
+                        return result.substring(0, i);
+                }
+            }
+
+        }
+        return result;
     }
 
     public static boolean isPalindrome(int x) {
@@ -130,12 +161,9 @@ public class MentorMeeting {
             this.val = val;
             this.next = next;
         }
+
     }
 
-    public static boolean isPalindrome(ListNode head) {
-        List<ListNode> arr = new LinkedList<>(Collections.reverse(head));
-        Collections.checkedList(head)
-    }
 
     public static void finra(int n) {
         if (n % 5 == 0 && n % 3 == 0) {
@@ -161,12 +189,7 @@ public class MentorMeeting {
 //
 //        }
 //    }
-//Input: strs = ["dog","racecar","car"]
-//Output: ""
-//Explanation: There is no common prefix among the input strings.
-    public String longestCommonPrefix(String[] strs) {
 
-    }
 
     public static int fact(int n) {
         int total = 1;
