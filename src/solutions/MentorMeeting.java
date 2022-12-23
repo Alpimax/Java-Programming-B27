@@ -51,6 +51,7 @@ public class MentorMeeting {
         return result;
     }
 
+
     public static boolean isPalindrome(int x) {
         int temp = x;
         int total = 1;
