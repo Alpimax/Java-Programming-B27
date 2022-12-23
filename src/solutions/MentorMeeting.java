@@ -26,17 +26,17 @@ public class MentorMeeting {
         var value = 0L;
 
         while (temp > 0) {
-            total= temp % 10;
+            total = temp % 10;
             value += total;
             value *= 10;
             temp /= 10;
         }
         value /= 10;
 
-       if(x == value)
-           return true;
-       else
-           return false;
+        if (x == value)
+            return true;
+        else
+            return false;
 
 
     }
@@ -112,6 +112,29 @@ public class MentorMeeting {
             }
         }
         return arr;
+
+    }
+
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public static boolean isPalindrome(ListNode head) {
+        List<ListNode> arr = new LinkedList<>(Collections.reverse(head));
+        Collections.checkedList(head)
     }
 
     public static void finra(int n) {
@@ -125,7 +148,7 @@ public class MentorMeeting {
             System.out.println("not FINRA");
     }
 
-//    public static int fibonnacci(int n) {
+    //    public static int fibonnacci(int n) {
 //        int n1, n2, n3;
 //        int count = 0;
 //
@@ -138,6 +161,12 @@ public class MentorMeeting {
 //
 //        }
 //    }
+//Input: strs = ["dog","racecar","car"]
+//Output: ""
+//Explanation: There is no common prefix among the input strings.
+    public String longestCommonPrefix(String[] strs) {
+
+    }
 
     public static int fact(int n) {
         int total = 1;
