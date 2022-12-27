@@ -41,4 +41,10 @@ public class FrequencyOfCharacters {
         System.out.println(counter);
 
     }
+}class Solution {
+    public int lengthOfLastWord(String s) {
+        String [] arr = s.split(" ");
+        int i =  arr[arr.length -1].length();
+        return i;
+    }
 }
