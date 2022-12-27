@@ -37,9 +37,7 @@ public class FrequencyOfCharacters {
                 counter.put(key, 1);
             }
         }
-
         System.out.println(counter);
-
     }
 }
 
