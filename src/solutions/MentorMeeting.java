@@ -49,6 +49,7 @@ public class MentorMeeting {
         }
         return result;
     }
+
     public static boolean isPalindrome(int x) {
         int temp = x;
         int total = 1;
@@ -69,6 +70,7 @@ public class MentorMeeting {
 
 
     }
+
     public static List<Integer> sortMap(Map<String, Integer> str) {
         List<Integer> list = new LinkedList<>();
         for (Map.Entry<String, Integer> each : str.entrySet()) {
