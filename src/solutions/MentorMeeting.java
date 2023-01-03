@@ -52,6 +52,29 @@ public class MentorMeeting {
         return result;
     }
 
+    public static int leetCode() {
+        int number = 0;
+//You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+//
+//Increment the large integer by one and return the resulting array of digits.
+//
+// 1,2,3 +1 = 1
+//
+        
+//Example 1:
+//
+//Input: digits = [1,2,3]
+//Output: [1,2,4]
+//Explanation: The array represents the integer 123.
+//Incrementing by one gives 123 + 1 = 124.
+//Thus, the result should be [1,2,4].
+
+
+
+        return number;
+
+    }
+
     public static boolean isPalindrome(int x) {
         int temp = x;
         int total = 1;
@@ -81,7 +104,6 @@ public class MentorMeeting {
         Collections.sort(list);
         return list;
     }
-
 
 
     public static Map<String, Integer> FrequencyOfCharacters(String str) {
@@ -176,7 +198,6 @@ public class MentorMeeting {
         } else
             System.out.println("not FINRA");
     }
-
 
 
     //    public static int fibonnacci(int n) {
